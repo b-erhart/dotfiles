@@ -9,4 +9,4 @@ cd -- "$(dirname -- "$0")" || ( echo "Failed to enter dotfiles directory. Abort.
 [ -f ./dotter ] && rm ./dotter
 
 # Download the latest dotter executable
-wget --no-verbose --show-progress "https://github.com/SuperCuber/dotter/releases/latest/download/dotter"
+wget --no-hsts --no-verbose --show-progress "https://github.com/SuperCuber/dotter/releases/latest/download/dotter"
