@@ -1,22 +1,28 @@
 [helpers]
 
+
 [base]
 "depends" = ["bash", "zsh"]
+
 
 [bash]
 "depends" = ["sh"]
 
-[bash.files]
-"home/.bashrc" = "~/.bashrc"
-"home/.bash_profile" = "~/.bash_profile"
+    [bash.files]
+    "home/.bashrc" = "~/.bashrc"
+    "home/.bash_profile" = "~/.bash_profile"
+
 
 [zsh]
 "depends" = ["sh"]
 
-[zsh.files]
-"home/.zshenv" = "~/.zshenv"
-"home/.config/zsh/.zshrc" = "~/.config/zsh/.zshrc"
+    [zsh.files]
+    "home/.zshenv" = "~/.zshenv"
+    "home/.config/zsh/.zshrc" = "~/.config/zsh/.zshrc"
 
-[sh.files]
-"home/.config/sh/aliases.sh" = "~/.config/sh/aliases.sh"
-"home/.config/sh/env.sh" = "~/.config/sh/env.sh"
+
+[sh]
+
+    [sh.files]
+    "home/.config/sh/aliases.sh" = "~/.config/sh/aliases.sh"
+    "home/.config/sh/env.sh" = "~/.config/sh/env.sh"
