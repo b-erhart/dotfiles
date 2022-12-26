@@ -2,7 +2,7 @@
 
 
 [base]
-"depends" = ["bash", "zsh"]
+"depends" = ["bash", "git", "zsh"]
 
 
 [bash]
@@ -13,12 +13,10 @@
     "home/.bash_profile" = "~/.bash_profile"
 
 
-[zsh]
-"depends" = ["sh"]
+[git]
 
-    [zsh.files]
-    "home/.zshenv" = "~/.zshenv"
-    "home/.config/zsh/.zshrc" = "~/.config/zsh/.zshrc"
+    [git.files]
+    "home/.config/git/config" = "~/.config/git/config"
 
 
 [sh]
@@ -26,3 +24,11 @@
     [sh.files]
     "home/.config/sh/aliases.sh" = "~/.config/sh/aliases.sh"
     "home/.config/sh/env.sh" = "~/.config/sh/env.sh"
+
+
+[zsh]
+"depends" = ["sh"]
+
+    [zsh.files]
+    "home/.zshenv" = "~/.zshenv"
+    "home/.config/zsh/.zshrc" = "~/.config/zsh/.zshrc"
