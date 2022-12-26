@@ -1,0 +1,10 @@
+[helpers]
+
+[default]
+depends = []
+
+[default.files]
+dotter = ""
+"download_dotter.sh" = ""
+
+[default.variables]
