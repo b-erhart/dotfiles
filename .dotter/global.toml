@@ -1,5 +1,12 @@
 [helpers]
 
-[base.files]
+[base]
+"depends" = ["bash", "zsh"]
+
+[bash.files]
 "home/.bashrc" = "~/.bashrc"
 "home/.bash_profile" = "~/.bash_profile"
+
+[zsh.files]
+"home/.zshenv" = "~/.zshenv"
+"home/.config/zsh/.zshrc" = "~/.config/zsh/.zshrc"
