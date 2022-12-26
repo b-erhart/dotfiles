@@ -1,7 +1,15 @@
-# .bashrc
+#/usr/bin/env bash
 
-# If not running interactively, don't do anything
+# BASHRC
+
+# bash specific environment
+export HISTFILE="$XDG_STATE_HOME/bash/history"
+
+mkdir -p "$XDG_STATE_HOME/bash"
+
+
+# If not running interactively, exit
 [[ $- != *i* ]] && return
 
-# PS1='[\u@\h \W]\$ '
+# Set prompt
 export PS1="\[\e[37m\]\W\[\e[m\] \[\e[32m\]\\$\[\e[m\] "

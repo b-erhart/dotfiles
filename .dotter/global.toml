@@ -2,3 +2,4 @@
 
 [base.files]
 "home/.bashrc" = "~/.bashrc"
+"home/.bash_profile" = "~/.bash_profile"
