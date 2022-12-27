@@ -2,7 +2,7 @@
 
 
 [base]
-"depends" = ["bash", "git", "zsh"]
+"depends" = ["bash", "git", "nvim", "zsh"]
 
 
 [bash]
@@ -17,6 +17,12 @@
 
     [git.files]
     "home/.config/git/config" = "~/.config/git/config"
+
+
+[nvim]
+
+    [nvim.files]
+    "home/.config/nvim/" = "~/.config/nvim/"
 
 
 [sh]
