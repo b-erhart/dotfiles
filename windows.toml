@@ -1,0 +1,3 @@
+"nvim" = "${LOCALAPPDATA}/nvim"
+"jetbrains/.ideavimrc" = "${HOMEPATH}/.ideavimrc"
+"starship" = "${LOCALAPPDATA}/starship"

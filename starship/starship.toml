@@ -1,0 +1,21 @@
+[battery]
+full_symbol = "• "
+charging_symbol = "⇡ "
+discharging_symbol = "⇣ "
+unknown_symbol = "? "
+empty_symbol = "! "
+
+[erlang]
+symbol = "erlang "
+
+[golang]
+symbol = "[Go](bold cyan) "
+
+[nodejs]
+symbol = "[Node.js](bold green) "
+
+[pulumi]
+symbol = "🧊 "
+
+[python]
+symbol = "[Python](bold yellow) "

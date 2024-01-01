@@ -1,0 +1,46 @@
+" set leader key to space
+let mapleader=" "
+let maplocalleader=" "
+
+" load plugins
+Plug 'tpope/vim-commentary'
+set NERDTree
+
+" common settings
+set history=1000
+set showcmd
+set showmode
+set scrolloff=5
+set incsearch
+set smartcase
+set number
+set relativenumber
+
+" common keybindings
+nnoremap <Space> <Nop>
+vnoremap <Space> <Nop>
+vnoremap > >gv
+vnoremap < <gv
+
+" IDEA-specific keybindings
+nnoremap <leader>ds :action ShowErrorDescription<CR>
+vnoremap <leader>ds :action ShowErrorDescription<CR>
+nnoremap <leader>dn :action GotoNextError<CR>
+nnoremap <leader>dp :action GotoPreviousError<CR>
+nnoremap <leader>bn :action NextTab<CR>
+nnoremap <leader>bp :action PreviousTab<CR>
+nnoremap <leader>bd :action CloseEditor<CR>
+nnoremap <leader>ba :action CloseAllEditors<CR>
+nnoremap <leader>bl :action Switcher<CR>
+nnoremap <leader>a  :action ShowIntentionActions<CR>
+nnoremap <leader>e  :NERDTreeToggle<CR>
+nnoremap <leader>f  :action SearchEverywhere<CR>
+nnoremap <leader>r  :action RenameElement<CR>
+nnoremap <leader>s  :action FindInPath<CR>
+nnoremap <C-e> :NERDTreeFocus<CR>
+
+" keybindings for copying/cutting/pasting to/from system clipboard
+nnoremap <leader>y "+y
+nnoremap <leader>p "+p
+vnoremap <leader>y "+y
+vnoremap <leader>p "+p
