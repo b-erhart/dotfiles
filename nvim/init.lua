@@ -1,4 +1,4 @@
-require('b-erhart.options')
-require('b-erhart.keys')
-require('b-erhart.lazy')
-require('b-erhart.autocmd')
+require("custom.opts")
+require("custom.keys")
+require("custom.cmds")
+require("custom.lazy")
