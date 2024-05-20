@@ -1,0 +1,242 @@
+* {
+    font-family: 'JetBrains Mono NL', 'Noto Sans Mono', 'Font Awesome 6 Free', 'Font Awesome 6 Brands', monospace;
+    font-size: 17px;
+}
+
+window#waybar {
+    background-color: #282828;
+    color: #fbf1c7;
+}
+
+window#waybar.hidden {
+    opacity: 0.2;
+}
+
+window#waybar.empty {
+}
+
+window#waybar.solo {
+}
+
+window#waybar.termite {
+}
+
+window#waybar.chromium {
+}
+
+button {
+    border: none;
+    border-radius: 0;
+    color: #fbf1c7;
+}
+
+/* https://github.com/Alexays/Waybar/wiki/FAQ#the-workspace-buttons-have-a-strange-hover-effect */
+button:hover {
+    background: inherit;
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+#workspaces button {
+    min-width: 0;
+    padding: 0 10px;
+    background-color: #3c3836;
+}
+
+#workspaces button:hover {
+    background: rgba(0, 0, 0, 0.2);
+}
+
+#workspaces button.focused {
+    background-color: #af3a03;
+}
+
+#workspaces button.urgent {
+    background-color: #7b2c2f;
+}
+
+#mode {
+    background-color: #3c3836;
+}
+
+#clock,
+#battery,
+#cpu,
+#memory,
+#disk,
+#temperature,
+#backlight,
+#network,
+#pulseaudio,
+#wireplumber,
+#custom-media,
+#tray,
+#mode,
+#idle_inhibitor,
+#scratchpad,
+#power-profiles-daemon,
+#mpd {
+    padding: 0 10px;
+}
+
+#window,
+#workspaces {
+    margin: 0 4px;
+}
+
+/* If workspaces is the leftmost module, omit left margin */
+.modules-left > widget:first-child > #workspaces {
+    margin-left: 0;
+}
+
+/* If workspaces is the rightmost module, omit right margin */
+.modules-right > widget:last-child > #workspaces {
+    margin-right: 0;
+}
+
+#clock {
+    background-color: #3c3836;
+}
+
+#battery {
+    background-color: #3e777a;
+}
+
+#battery.charging, #battery.plugged {
+}
+
+#power-profiles-daemon {
+}
+
+#power-profiles-daemon.performance {
+}
+
+#power-profiles-daemon.balanced {
+}
+
+#power-profiles-daemon.power-saver {
+}
+
+label:focus {
+    background-color: #000000;
+}
+
+#cpu {
+}
+
+#memory {
+}
+
+#disk {
+}
+
+#backlight {
+    background-color: #598859;
+}
+
+#network {
+    background-color: #a45176;
+}
+
+#network.disconnected {
+}
+
+#pulseaudio {
+    background-color: #7a7a15;
+}
+
+#pulseaudio.muted {
+}
+
+#wireplumber {
+    background-color: #7a7a15;
+}
+
+#wireplumber.muted {
+}
+
+#custom-media {
+}
+
+#custom-media.custom-spotify {
+}
+
+#custom-media.custom-vlc {
+}
+
+#temperature {
+}
+
+#temperature.critical {
+}
+
+#tray {
+}
+
+#tray > .passive {
+    -gtk-icon-effect: dim;
+}
+
+#tray > .needs-attention {
+    -gtk-icon-effect: highlight;
+    background-color: #7b2c2f;
+}
+
+#idle_inhibitor {
+    background-color: #c28c1e;
+}
+
+#idle_inhibitor.activated {
+}
+
+#mpd {
+}
+
+#mpd.disconnected {
+}
+
+#mpd.stopped {
+}
+
+#mpd.paused {
+}
+
+#language {
+}
+
+#keyboard-state {
+}
+
+#keyboard-state > label {
+}
+
+#keyboard-state > label.locked {
+}
+
+#scratchpad {
+    background-color: #3c3836;
+}
+
+#scratchpad.empty {
+    background-color: transparent;
+}
+
+#privacy {
+    padding: 0;
+}
+
+#privacy-item {
+    padding: 0 5px;
+    color: white;
+}
+
+#privacy-item.screenshare {
+    background-color: #cf5700;
+}
+
+#privacy-item.audio-in {
+    background-color: #1ca000;
+}
+
+#privacy-item.audio-out {
+    background-color: #0069d4;
+}

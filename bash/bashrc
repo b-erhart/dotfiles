@@ -1,0 +1,13 @@
+# .bashrc
+
+# Source global definitions
+if [ -f /etc/bashrc ]; then
+    . /etc/bashrc
+fi
+
+[[ ! -d "$XDG_STATE_HOME/bash" ]] && mkdir -p "$XDG_STATE_HOME/bash"
+HISTFILE="$XDG_STATE_HOME/bash/history"
+
+autoinstall-tex() {
+    sudo dnf install $( find . -name '*.tex' -exec cat {} \; | sed -n 's/^[^%]*\\usepackage[^{]*{\([^}]*\)}.*$/tex\(\1.sty\)/p' | paste -sd ' ' - )
+}

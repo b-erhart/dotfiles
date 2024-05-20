@@ -1,0 +1,22 @@
+# shell configuration
+"sh/env" = "${HOME}/.env"
+"bash/bashrc" = "${HOME}/.bashrc"
+"bash/bash_profile" = "${HOME}/.bash_profile"
+"zsh/zshenv" = "${HOME}/.zshenv"
+"zsh/zshrc" = "${HOME}/.zshrc"
+
+# general dotfiles
+"dunst" = "${HOME}/.config/dunst"
+"foot" = "${HOME}/.config/foot"
+"kanshi" = "${HOME}/.config/kanshi"
+"kvantum" = "${HOME}/.config/Kvantum"
+"nvim" = "${HOME}/.config/nvim"
+"rofi" = "${HOME}/.config/rofi"
+"sway" = "${HOME}/.config/sway"
+"swaylock" = "${HOME}/.config/swaylock"
+"waybar" = "${HOME}/.config/waybar"
+
+# GTK/QT application theming
+"linux-theming/gtk-2.0" = "${HOME}/.config/gtk-2.0"
+"linux-theming/gtk-3.0" = "${HOME}/.config/gtk-3.0"
+"linux-theming/qt6ct" = "${HOME}/.config/qt6ct"

@@ -1,0 +1,10 @@
+ignore-empty-password
+indicator-idle-visible
+daemonize
+image=$XDG_CONFIG_HOME/sway/bg.png
+scaling=fill
+color=1e1d1d
+font=JetBrains Mono NL
+font-size=18
+indicator-radius=75
+indicator-thickness=12
