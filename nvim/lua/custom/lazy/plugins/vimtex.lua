@@ -3,6 +3,7 @@ return {
     ft = { "tex" },
     init = function()
         vim.g.vimtex_mappings_enabled = 0
+        vim.g.vimtex_quickfix_mode = 0
 
         vim.api.nvim_create_autocmd("FileType", {
             pattern = "tex",

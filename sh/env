@@ -16,6 +16,8 @@ export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/gcr/ssh"
 # Make applications behave on Wayland
 # If using a desktop environment, set these in ~/.config/environment.d/<2-digit-no>-<name>.conf files
 export ELECTRON_OZONE_PLATFORM_HINT=auto
+
+# Set QT theme source
 export QT_QPA_PLATFORMTHEME=qt6ct
 
 # Keep $HOME clean
@@ -27,8 +29,18 @@ export NODE_REPL_HISTORY="$XDG_DATA_HOME/node_repl_history"
 export NPM_CONFIG_USERCONFIG="$XDG_CONFIG_HOME/npm/npmrc"
 
 # Append path
-export PATH="$PATH:$HOME/.local/bin:$GOPATH/bin"
-export PATH="$PATH:$HOME/.local/share/npm/bin"
+append_path() {
+    [ $# -ne 1 ] && return
+    (echo "$1" | grep -q ":") && return
+
+    if ! echo "$PATH" | grep -q "^$1:\|:$1:\|:$1\$"; then
+        PATH="$PATH:$1"
+    fi
+}
+
+append_path "$HOME/.local/bin"
+append_path "$GOPATH/bin"
+append_path "$HOME/.local/share/npm/bin"
 
 # Add device-specific environment
 [ -f "$HOME/.envlocal" ] && . "$HOME/.envlocal"

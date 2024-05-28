@@ -22,8 +22,8 @@ vim.keymap.set({ "n", "v" }, "<leader>P", "\"+P")
 vim.keymap.set({ "i", "c" }, "<C-v>", "<C-r>+")
 vim.keymap.set({ "i", "c" }, "<C-S-v>", "<C-r>+")
 
--- exit terminal mode with <Esc>
-vim.keymap.set("t", "<Esc>", "<C-\\><C-n>", { silent = true })
+-- exit terminal mode with <Esc><Esc>
+vim.keymap.set("t", "<Esc><Esc>", "<C-\\><C-n>", { silent = true })
 
 -- keep selection when indenting
 vim.keymap.set("v", ">", ">gv")

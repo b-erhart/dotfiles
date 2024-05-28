@@ -1,0 +1,10 @@
+profile home {
+    output eDP-1 {
+        mode 1920x1080
+        position 0,360
+    }
+    output "AOC Q3279WG5B 0x0000959D" {
+        mode 2560x1440
+        position 1920,0
+    }
+}

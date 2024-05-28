@@ -1,4 +1,4 @@
--- [[ GENERAL SETTINGS ]]
+-- [[ GENERAL OPTIONS ]]
 
 -- line numbers
 vim.opt.number = true

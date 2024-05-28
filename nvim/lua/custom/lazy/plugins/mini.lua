@@ -2,9 +2,11 @@ return {
     "echasnovski/mini.nvim",
     version = "*",
     config = function()
-        require("mini.comment").setup()
-        require("mini.completion").setup()
-        require("mini.cursorword").setup()
+        require("mini.comment").setup({})
+        require("mini.completion").setup({
+            fallback = function() end,
+        })
+        require("mini.cursorword").setup({})
 
         -- set keybindings for completion
         vim.api.nvim_create_autocmd("LspAttach", {
