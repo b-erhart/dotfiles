@@ -4,6 +4,7 @@ return {
     config = function()
         require("mini.comment").setup({})
         require("mini.completion").setup({
+            auto_setup = false,
             fallback = function() end,
         })
         require("mini.cursorword").setup({})
