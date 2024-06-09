@@ -5,6 +5,9 @@ if [ -f /etc/bashrc ]; then
     . /etc/bashrc
 fi
 
+# Source environment
+. "$HOME/.env"
+
 [[ ! -d "$XDG_STATE_HOME/bash" ]] && mkdir -p "$XDG_STATE_HOME/bash"
 HISTFILE="$XDG_STATE_HOME/bash/history"
 

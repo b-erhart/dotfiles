@@ -1,0 +1,15 @@
+# shell configuration
+"sh/env" = "~/.env"
+"bash/bashrc" = "~/.bashrc"
+"bash/bash_profile" = "~/.bash_profile"
+"zsh/zshenv" = "~/.zshenv"
+"zsh/zshrc" = "~/.zshrc"
+
+# general dotfiles
+# "kvantum" = "~/.config/Kvantum"
+"nvim" = "~/.config/nvim"
+
+# GTK/QT application theming
+# "linux-theming/gtk-2.0" = "~/.config/gtk-2.0"
+# "linux-theming/gtk-3.0" = "~/.config/gtk-3.0"
+# "linux-theming/qt6ct" = "~/.config/qt6ct"

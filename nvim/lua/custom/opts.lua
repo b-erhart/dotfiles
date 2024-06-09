@@ -41,12 +41,13 @@ vim.g.netrw_banner = 0
 vim.g.netrw_winsize = 25
 
 -- misc
-vim.opt.updatetime = 250
+vim.opt.updatetime = 100
 vim.opt.title = true
 vim.opt.showmode = false
 vim.opt.formatoptions:remove({ "c", "r", "o" })
 vim.opt.shortmess:append({ I = true })
 vim.opt.isfname:append("@-@")
+vim.cmd.language("en_US")
 vim.loader.enable()
 
 -- use PowerShell on Windows

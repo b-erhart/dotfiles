@@ -1,8 +1,16 @@
 return {
     "neovim/nvim-lspconfig",
     dependencies = {
+        -- Mason
         "williamboman/mason.nvim",
         "williamboman/mason-lspconfig.nvim",
+
+        -- Completion
+        "hrsh7th/nvim-cmp",
+        "hrsh7th/cmp-nvim-lsp",
+        "hrsh7th/cmp-path",
+        "hrsh7th/cmp-nvim-lsp-signature-help",
+        "L3MON4D3/LuaSnip",
     },
     config = function()
         local lspconfig = require("lspconfig")
@@ -53,8 +61,7 @@ return {
                             plugins = {
                                 {
                                     name = "@vue/typescript-plugin",
-                                    location = "/home/b-erhart/.local/share/npm/lib/node_modules/@vue/typescript-plugin",
-                                    -- location = "node_modules",
+                                    location = "",
                                     languages = { "vue" }
                                 },
                             },
@@ -72,6 +79,30 @@ return {
                     })
                 end,
             },
+        })
+
+        local cmp = require("cmp")
+
+        cmp.setup({
+            snippet = {
+                expand = function(args)
+                    require("luasnip").lsp_expand(args.body)
+                end,
+            },
+            mapping = cmp.mapping.preset.insert({
+                ['<C-n>'] = cmp.mapping.select_next_item(),
+                ['<C-p>'] = cmp.mapping.select_prev_item(),
+                ['<Tab>'] = cmp.mapping.confirm({ select = true }),
+                ['<C-b>'] = cmp.mapping.scroll_docs(-4),
+                ['<C-f>'] = cmp.mapping.scroll_docs(4),
+                ['<C-c>'] = cmp.mapping.abort(),
+            }),
+            sources = cmp.config.sources({
+                { name = "nvim_lsp" },
+                { name = "luasnip" },
+                { name = "path" },
+                { name = "nvim_lsp_signature_help" },
+            })
         })
 
         vim.api.nvim_create_autocmd("LspAttach", {
