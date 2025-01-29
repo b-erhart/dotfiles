@@ -1,4 +1,8 @@
 require("custom.opts")
 require("custom.keys")
 require("custom.cmds")
-require("custom.lazy")
+
+-- only load neovim plugins when running standalone
+if not vim.g.vscode then
+    require("custom.lazy")
+end
