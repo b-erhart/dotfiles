@@ -1,10 +1,10 @@
 -- [[ GENERAL KEYBINDINGS ]]
 
 ---Set keybinding like with "vim.keymap.set", but with VSCode action ids.
----@param modes string | table VIM modes to set the keybinding for
+---@param modes string|table VIM modes to set the keybinding for
 ---@param keybinding string Key combination that triggers the action
 ---@param action string VSCode action id
----@param opts table Table of optional options for VIM keybindings
+---@param opts table? Table of optional options for VIM keybindings
 function vscode_keymap_set(modes, keybinding, action, opts)
     if not vim.g.vscode then
         return
