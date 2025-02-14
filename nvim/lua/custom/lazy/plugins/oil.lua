@@ -7,6 +7,9 @@ return {
                 max_width = 80,
                 max_height = 25,
             },
+            keymaps = {
+                ["q"] = { "actions.close", mode = "n" }
+            },
         })
 
         vim.keymap.set({ "n", "v" }, "<leader>e", function() require("oil").toggle_float() end, {})

@@ -6,3 +6,6 @@ require("custom.cmds")
 if not vim.g.vscode then
     require("custom.lazy")
 end
+
+pcall(require, "custom.local")
+

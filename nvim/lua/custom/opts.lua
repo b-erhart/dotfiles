@@ -2,7 +2,6 @@
 
 -- line numbers
 vim.opt.number = true
-vim.opt.relativenumber = true
 
 -- indentation
 vim.opt.tabstop = 4
@@ -47,7 +46,7 @@ vim.opt.showmode = false
 vim.opt.formatoptions:remove({ "c", "r", "o" })
 vim.opt.shortmess:append({ I = true })
 vim.opt.isfname:append("@-@")
-vim.cmd.language("en_US")
+vim.cmd.language("en_US.utf-8")
 vim.loader.enable()
 
 -- use PowerShell on Windows

@@ -22,6 +22,8 @@ return {
             },
             handlers = {
                 function(server_name)
+                    -- default handler, automatically sets up Mason-installed
+                    -- LSPs
                     lspconfig[server_name].setup({})
                 end,
                 ["lua_ls"] = function()
@@ -55,7 +57,7 @@ return {
                         }
                     })
                 end,
-                ["tsserver"] = function()
+                ["ts_ls"] = function()
                     lspconfig.tsserver.setup({
                         init_options = {
                             plugins = {
@@ -67,15 +69,6 @@ return {
                             },
                         },
                         filetypes = { "typescript", "javascript", "javascriptreact", "typescriptreact", "vue" },
-                    })
-                end,
-                ["volar"] = function()
-                    lspconfig.volar.setup({
-                        -- init_options = {
-                        --     vue = {
-                        --         hybridMode = false,
-                        --     },
-                        -- },
                     })
                 end,
             },
