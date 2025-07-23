@@ -1,5 +1,3 @@
--- [[ GENERAL OPTIONS ]]
-
 -- line numbers
 vim.opt.number = true
 
