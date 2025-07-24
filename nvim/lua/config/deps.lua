@@ -19,14 +19,16 @@ require("mini.deps").setup({ path = { package = path_package } })
 MiniDeps.add({ source = "echasnovski/mini.deps" })
 
 -- source plugin configs
-require("plugins.guess-indent")
 require("plugins.kanagawa")
+
+require("plugins.oil")
 require("plugins.lualine")
+require("plugins.guess-indent")
 require("plugins.mason-lspconfig")
-require("plugins.mini-completion")
+require("plugins.telescope")
+require("plugins.treesitter")
+require("plugins.blink-cmp")
+
 require("plugins.mini-diff")
 require("plugins.mini-pairs")
 require("plugins.mini-trailspace")
-require("plugins.oil")
-require("plugins.telescope")
-require("plugins.treesitter")

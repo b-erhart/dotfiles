@@ -1,5 +1,5 @@
 MiniDeps.add({ source = "echasnovski/mini.trailspace" })
 
-MiniDeps.now(function ()
+MiniDeps.now(function()
     require("mini.trailspace").setup()
 end)
