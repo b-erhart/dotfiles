@@ -47,22 +47,33 @@ vim.keymap.set("v", "<", "<gv")
 vim.keymap.set({ "n", "v" }, "<leader>bn", "<CMD>bnext<CR>")
 vim.keymap.set({ "n", "v" }, "<leader>bp", "<CMD>bprev<CR>")
 vim.keymap.set({ "n", "v" }, "<leader>bd", "<CMD>bdelete<CR>")
-vim.keymap.set({ "n", "v" }, "<leader>br", "<CMD>%bdelete<CR>")
+vim.keymap.set({ "n", "v" }, "<leader>ba", "<CMD>%bdelete<CR>")
 vscode_keymap_set({ "n", "v" }, "<leader>bn", "workbench.action.nextEditor")
 vscode_keymap_set({ "n", "v" }, "<leader>bp", "workbench.action.previousEditor")
 vscode_keymap_set({ "n", "v" }, "<leader>bd", "workbench.action.closeActiveEditor")
-vscode_keymap_set({ "n", "v" }, "<leader>br", "workbench.action.closeAllEditors")
+vscode_keymap_set({ "n", "v" }, "<leader>ba", "workbench.action.closeAllEditors")
 
--- open netrw
-vim.keymap.set({"n", "v"}, "<leader>e", "<CMD>Ex<CR>")
+-- navigate tabs
+vim.keymap.set({ "n", "v" }, "<leader>tc", "<CMD>tabnew<CR>")
+vim.keymap.set({ "n", "v" }, "<leader>tn", "<CMD>tabnext<CR>")
+vim.keymap.set({ "n", "v" }, "<leader>tp", "<CMD>tabprev<CR>")
+vim.keymap.set({ "n", "v" }, "<leader>tq", "<CMD>tabclose<CR>")
 
--- clear search highlighting
-vim.keymap.set({ "n", "v" }, "<leader>c", "<CMD>noh<CR>")
+-- navgate windows
+vim.keymap.set({ "n", "v" }, "<leader>wh", "<C-w>h")
+vim.keymap.set({ "n", "v" }, "<leader>wj", "<C-w>j")
+vim.keymap.set({ "n", "v" }, "<leader>wk", "<C-w>k")
+vim.keymap.set({ "n", "v" }, "<leader>wl", "<C-w>l")
+vim.keymap.set({ "n", "v" }, "<leader>wv", "<C-w>v")
+vim.keymap.set({ "n", "v" }, "<leader>ws", "<C-w>s")
+vim.keymap.set({ "n", "v" }, "<leader>wq", "<C-w>q")
+
+vim.keymap.set({ "n", "v" }, "<leader>x", "<CMD>noh<CR>")
 
 -- VSCode specific keybindings - handled by plugins when running standalone
-vscode_keymap_set({ "n", "v" }, "<leader>b", "workbench.action.showAllEditors")
+vscode_keymap_set({ "n", "v" }, "<leader>fb", "workbench.action.showAllEditors")
 vscode_keymap_set({ "n", "v" }, "<leader>e", "workbench.view.explorer")
-vscode_keymap_set({ "n", "v" }, "<leader>f", "workbench.action.quickOpen")
+vscode_keymap_set({ "n", "v" }, "<leader>ff", "workbench.action.quickOpen")
 vscode_keymap_set({ "n", "v" }, "<leader>g", "workbench.view.scm")
 vscode_keymap_set({ "n", "v" }, "<leader>j", "workbench.actions.view.problems")
 vscode_keymap_set({ "n", "v" }, "<leader>q", "workbench.action.showCommands")
